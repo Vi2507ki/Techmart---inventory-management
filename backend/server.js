@@ -17,11 +17,12 @@ connectDB();
 const app = express();
 
 // ── Middleware ───────────────────────────────────────────────
+const cors = require("cors");
+
 app.use(
   cors({
-    origin: ["https://techmart-frontend-3rch.onrender.com"],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: "https://techmart-frontend-3rch.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 ); // Allow cross-origin requests (frontend ↔ backend)
