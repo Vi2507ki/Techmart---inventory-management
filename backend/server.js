@@ -19,8 +19,9 @@ const app = express();
 // ── Middleware ───────────────────────────────────────────────
 app.use(
   cors({
-    origin: "https://techmart-frontend-3rch.onrender.com",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["https://techmart-frontend-3rch.onrender.com"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   }),
 ); // Allow cross-origin requests (frontend ↔ backend)
