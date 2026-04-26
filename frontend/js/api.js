@@ -3,7 +3,7 @@
 // All HTTP calls go through this file.
 // ============================================================
 
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://techmart-backend-svm7.onrender.com/api';
 
 // ── Core fetch wrapper ───────────────────────────────────────
 async function apiFetch(endpoint, options = {}) {
